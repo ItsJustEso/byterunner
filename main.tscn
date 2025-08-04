@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://148bv8rd4uam"]
+
+[ext_resource type="Texture2D" uid="uid://cly2b8fam3m38" path="res://image-from-rawpixel-id-6204307-png.png" id="1_ig7tw"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.584428, 0.626408)
+texture = ExtResource("1_ig7tw")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
+position = Vector2(0, 1.5964)
+scale = Vector2(1.71108, 1.5964)
