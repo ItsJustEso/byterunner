@@ -1,7 +1,7 @@
 .import/
 .export/
 .export_debug/
-*.godot
 *.import
 *.tmp
 *.log
+
