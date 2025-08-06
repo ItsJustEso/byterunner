@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0wvlul7nvru8"]
+
+[ext_resource type="Texture2D" uid="uid://b6l1hmy160dov" path="res://Flooring.jpg" id="1_n4gd2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7ns6"]
+size = Vector2(2247, 1111)
+
+[node name="floor" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, 104)
+texture = ExtResource("1_n4gd2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(4, 10)
+shape = SubResource("RectangleShape2D_x7ns6")

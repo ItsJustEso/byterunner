@@ -1,5 +1,10 @@
 res://main.tscn
-res://player.gd
 res://ground.tscn
-res://ground.gd
 res://player.tscn
+res://parallax_background.gd
+res://camera_2d.gd
+res://main.gd
+res://player.gd
+res://flooring.tscn
+res://villian.tscn
+res://villian.gd

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://1vslrjmnasgb"]
+
+[ext_resource type="Texture2D" uid="uid://2re1tydbc07y" path="res://Villian(NoBackground)-Photoroom.png" id="1_0q5q7"]
+[ext_resource type="Script" uid="uid://dapb253u0g5ss" path="res://villian.gd" id="1_skecx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_skecx"]
+size = Vector2(435, 388)
+
+[node name="villian" type="CharacterBody2D"]
+script = ExtResource("1_skecx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.99998, -2.00001)
+scale = Vector2(0.2375, 0.228702)
+texture = ExtResource("1_0q5q7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7.5, 7)
+shape = SubResource("RectangleShape2D_skecx")

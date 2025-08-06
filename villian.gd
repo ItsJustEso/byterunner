@@ -9,10 +9,7 @@ func _physics_process(delta):
 	# Handle horizontal input
 	var direction = 0.0
 
-	if Input.is_action_pressed("ui_right"):
-		direction += 1.0
-	if Input.is_action_pressed("ui_left"):
-		direction -= 1.0
+
 
 	# Set horizontal velocity
 	velocity.x = direction * speed
@@ -21,8 +18,7 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 
 	# Handle jump
-	if is_on_floor() and Input.is_action_just_pressed("ui_up"):
-		velocity.y = jump_speed
+	
 
 	# Move the character (this is built-in to CharacterBody2D in Godot 4)
 	move_and_slide()
