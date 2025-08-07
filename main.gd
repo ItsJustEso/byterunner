@@ -18,13 +18,17 @@ func _process(delta):
 	for tile in floor_tiles:
 		tile.position.x -= floor_speed * delta
 
-	# If the last tile has moved far enough left, spawn another
+	# Preload buffer: how early to spawn next tile (increase to spawn sooner)
+	var preload_buffer = 1000000
+
+	# Check if we need to spawn a new floor tile earlier
 	if floor_tiles.size() > 0:
 		var last_tile = floor_tiles[-1]
 		var sprite = last_tile.get_node("Sprite2D")
 		var tile_width = sprite.texture.get_width()
-		if last_tile.position.x + tile_width <= get_viewport().size.x:
+		if last_tile.position.x + tile_width <= get_viewport().size.x + preload_buffer:
 			spawn_floor_tile()
+
 
 func spawn_floor_tile():
 	if ground_scene != null:

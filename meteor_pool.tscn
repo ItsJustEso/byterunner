@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dngcmxjmebm5g"]
+
+[ext_resource type="Script" uid="uid://bxxc6lbgk7x3b" path="res://meteor_pool.gd" id="1_83178"]
+[ext_resource type="PackedScene" uid="uid://ddep6fxrleysw" path="res://meteor.tscn" id="2_lpxyu"]
+
+[node name="MeteorPool" type="Node2D"]
+script = ExtResource("1_83178")
+meteor_scene = ExtResource("2_lpxyu")

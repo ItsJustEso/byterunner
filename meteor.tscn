@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddep6fxrleysw"]
+
+[ext_resource type="Script" uid="uid://e1ukb3ykfjd2" path="res://meteor.gd" id="1_ohe0j"]
+[ext_resource type="Texture2D" uid="uid://et2qxt4pioqt" path="res://Meteor#1(NoBackground)-Photoroom.png" id="2_xunib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cuc0a"]
+size = Vector2(105, 109)
+
+[node name="Meteor" type="Area2D"]
+script = ExtResource("1_ohe0j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -348)
+scale = Vector2(0.0725, 0.0724827)
+texture = ExtResource("2_xunib")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -342.5)
+shape = SubResource("RectangleShape2D_cuc0a")
+
+[node name="Timer" type="Timer" parent="."]

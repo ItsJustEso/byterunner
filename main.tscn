@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://148bv8rd4uam"]
+[gd_scene load_steps=9 format=3 uid="uid://148bv8rd4uam"]
 
 [ext_resource type="Texture2D" uid="uid://c0vlrt46rluly" path="res://assets/starfield_alpha.png" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://cmwt2vahdlf5t" path="res://main.gd" id="1_lquwl"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d0wvlul7nvru8" path="res://flooring.tscn" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://1vslrjmnasgb" path="res://villian.tscn" id="3_7mycd"]
 [ext_resource type="Script" uid="uid://dp7urr3epnv2r" path="res://parallax_background.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://bvs8uklonibqn" path="res://meteor_spawner.gd" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://dngcmxjmebm5g" path="res://meteor_pool.tscn" id="9_kek77"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_lquwl")
@@ -25,10 +27,19 @@ position = Vector2(-561, 236)
 script = ExtResource("4_1bvp3")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.5, 0.5)
+motion_scale = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource("1_ig7tw")
 
 [node name="villian" parent="." instance=ExtResource("3_7mycd")]
-position = Vector2(-913, 94)
+position = Vector2(-884, 60)
+
+[node name="MeteorSpawner" type="Node2D" parent="."]
+script = ExtResource("7_272bh")
+
+[node name="SpawnTimer" type="Timer" parent="MeteorSpawner"]
+wait_time = 2.0
+autostart = true
+
+[node name="MeteorPool" parent="." instance=ExtResource("9_kek77")]

@@ -1,10 +1,10 @@
+res://meteor.gd
 res://main.tscn
-res://ground.tscn
-res://player.tscn
-res://parallax_background.gd
-res://camera_2d.gd
-res://main.gd
+res://meteor_spawner.gd
 res://player.gd
+res://meteor_pool.tscn
+res://meteor_pool.gd
+res://player.tscn
 res://flooring.tscn
 res://villian.tscn
-res://villian.gd
+res://meteor.tscn
